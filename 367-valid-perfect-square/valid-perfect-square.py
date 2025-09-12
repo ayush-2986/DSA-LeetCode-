@@ -1,0 +1,7 @@
+class Solution(object):
+    def isPerfectSquare(self, num):
+        sqrt = int(num**0.5)
+        if sqrt**2==num:
+            return True
+        else:
+            return False
