@@ -1,6 +1,6 @@
 # LeetCode Solutions
 
-Welcome to my **LeetCode Solutions** repository!  
+Welcome to my **LeetCode Solutions** repository
 This is where I share my **personal take** on solving LeetCode problems.  
 The goal of this repository is to document my thought process, approaches, and code for various problems I solve on LeetCode.
 
