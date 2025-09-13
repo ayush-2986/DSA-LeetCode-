@@ -1,4 +1,4 @@
-# Ayush's LeetCode Solutions
+# LeetCode Solutions
 
 Welcome to my **LeetCode Solutions** repository!  
 This is where I share my **personal take** on solving LeetCode problems.  
@@ -15,15 +15,6 @@ I enjoy problem-solving, programming, and exploring new concepts in Computer Sci
 ## LeetCode Profile
 You can check out my LeetCode profile here:  
 🔗 [https://leetcode.com/u/2986_ayush/](https://leetcode.com/u/2986_ayush/)
-
----
-
-## Repository Structure
-- Each file/folder corresponds to a specific LeetCode problem.
-- Solutions may include:
-  - Problem statement (optional)
-  - My approach and explanation
-  - Optimized code
 
 ---
 
