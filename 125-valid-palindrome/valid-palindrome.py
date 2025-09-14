@@ -2,12 +2,7 @@ class Solution(object):
     def isPalindrome(self, a):
         a = a.lower()
 
-        a_new = ""
-
-        for i in range(len(a)):
-            if str(a[i]).isalnum():
-                a_new = a_new+a[i]
-
+        a_new = "".join(char for char in a if char.isalnum())
         if a_new == a_new[::-1]:
             return True
         else:
