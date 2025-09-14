@@ -1,9 +1,5 @@
 class Solution(object):
     def isPalindrome(self, a):
-        """
-        :type s: str
-        :rtype: bool
-        """
         a = a.lower()
 
         a_new = ""
