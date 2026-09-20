@@ -17,8 +17,7 @@ public:
             count++;
             temp = temp->next;
         }
-        count /= 2;
-        count++;
+        count = count/2 + 1;
         for (int i=1; i<count; i++) cur = cur->next;
         return cur;
     }
