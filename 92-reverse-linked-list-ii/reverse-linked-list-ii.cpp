@@ -11,39 +11,50 @@
 class Solution {
 public:
     ListNode* reverseBetween(ListNode* head, int left, int right) {
-        ListNode *temp = head;
-        int count = 1;
+        // if (head->next == nullptr) return head;
+        // ListNode *temp = head;
+        // ListNode *selected = nullptr;
+        // int count = 1;
+        // for(int i=1; i<=right; i++){
 
-        ListNode *p1 = nullptr;
-        ListNode *start = nullptr, *end = nullptr;
+        //     ListNode *node = new ListNode;
+        //     if (count==left){
+        //         selected = temp;
+        //     }
+        //     if (count==right){
+        //         selected->next = nullptr;
+        //         break;
+        //     }
+        //     count++;
+        //     if (selected!=nullptr) selected = selected->next;
+        //     temp = temp->next;
+        // }
+        // return head;
+
+        if (head->next == nullptr) return head;
+        ListNode *temp = head;
+        ListNode *cursor = nullptr;
+        int count = 1;
+        int leftNo, rightNo, jumps;
 
         while(temp){
-            if (count == left-1) start = temp;
-            if (count==left) p1 = temp;
-            if (count==right) end = temp->next;
-            
+            if(count>=left && count<=right){
+                jumps = right-left;
+                leftNo = temp->val;
+                cursor = temp;
+                for(int i=0; i<jumps;i++){
+                    cursor = cursor->next;
+                }
+                rightNo = cursor->val;
+                cursor->val = leftNo;
+                temp->val = rightNo;
+                left +=1;
+                right -= 1;
+            }
+
             count++;
             temp = temp->next;
         }
-
-        ListNode* curr = p1;
-        ListNode *rev = end;
-
-        while(curr!=end){
-            ListNode *node = new ListNode;
-            node->val = curr->val;
-            node->next = rev;
-            rev = node;
-            curr = curr->next;
-        }
-        
-        if (start){ 
-            start->next = rev;
-            return head;
-        }
-        else{
-            return rev;
-        }
-
-    }
+        return head;
+    };
 };
