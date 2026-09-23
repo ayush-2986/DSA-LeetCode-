@@ -27,19 +27,7 @@ public:
             tail->next = temp;
             temp->next = nullptr;
             tail = temp;
-
-            // if(temp->next && temp->next->next) temp = temp->next->next;
-            // else temp = temp->next;
-            // if (temp->next && temp->next->next && temp->next->next->next){
-            //     temp = temp->next->next;
-            // }
-            // else if(temp->next && temp->next->next){
-            //     temp = temp->next->next;
-            //     // break;
-            // }
-            // else{
-            //     temp=nullptr;
-            // }
+            
             temp = next;
         }
         if(temp!=nullptr){
