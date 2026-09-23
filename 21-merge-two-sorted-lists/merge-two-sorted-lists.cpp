@@ -13,7 +13,7 @@ public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         
         ListNode *final = nullptr;
-        ListNode *last = nullptr;
+        ListNode *last = final;
 
         if (!list1 && !list2) return final;
         if (!list1 && list2) return list2;
@@ -27,11 +27,9 @@ public:
 
                 if(!final) {
                     final = node;
-                    last = node;
                 }
                 else{
                     last->next = node;
-                    last = node;
                 }
                 list1 = list1->next;
             }
@@ -42,14 +40,13 @@ public:
 
                 if(!final) {
                     final = node;
-                    last = node;
                 }
                 else{
                     last->next = node;
-                    last = node;
                 }
                 list2 = list2->next;
             }
+            last = node;
         }
 
         if (list1 && !list2){
