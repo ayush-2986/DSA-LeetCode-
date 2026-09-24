@@ -19,22 +19,29 @@ public:
         }
         int n = count-k+1;
 
+        // Comparing n and k and making k smaller than n
+        if(n==k) return head;
+        else if(n<k){
+            int x =n;
+            n = k;
+            k = x;
+        }
+
         int data;
         ListNode* temp2 = head;
+        int val1;
         ListNode *node1 = nullptr;
-        ListNode *node2 = nullptr;
         for(int i=1; i<=count; i++){
             if(i==k){
+                val1 = temp2->val;
                 node1 = temp2;
             }
             if(i==n){
-                node2 = temp2;
+                node1->val = temp2->val;
+                temp2->val = val1;
             }
             temp2 = temp2->next;
         }
-        int temp3 = node1->val;
-        node1->val = node2->val;
-        node2->val = temp3;
 
         return head;
 
