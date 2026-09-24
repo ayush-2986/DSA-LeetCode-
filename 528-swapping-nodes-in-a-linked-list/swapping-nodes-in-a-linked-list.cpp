@@ -44,15 +44,6 @@ public:
             temp = temp->next;
         }
 
-        // int count = 1;
-        // while(temp){
-        //     if (count==k){
-
-        //     }
-        //     count++;
-        //     temp = temp->next;
-        // }
-
         return head;
 
     }
