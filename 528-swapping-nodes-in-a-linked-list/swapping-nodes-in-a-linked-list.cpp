@@ -28,19 +28,19 @@ public:
         }
 
         int data;
-        ListNode* temp2 = head;
+        temp = head;
         int val1;
         ListNode *node1 = nullptr;
         for(int i=1; i<=count; i++){
             if(i==k){
-                val1 = temp2->val;
-                node1 = temp2;
+                val1 = temp->val;
+                node1 = temp;
             }
             if(i==n){
-                node1->val = temp2->val;
-                temp2->val = val1;
+                node1->val = temp->val;
+                temp->val = val1;
             }
-            temp2 = temp2->next;
+            temp = temp->next;
         }
 
         return head;
