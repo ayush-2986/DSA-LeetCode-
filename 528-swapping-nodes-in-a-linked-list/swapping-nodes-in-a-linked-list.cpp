@@ -39,9 +39,19 @@ public:
             if(i==n){
                 node1->val = temp->val;
                 temp->val = val1;
+                return head;
             }
             temp = temp->next;
         }
+
+        // int count = 1;
+        // while(temp){
+        //     if (count==k){
+
+        //     }
+        //     count++;
+        //     temp = temp->next;
+        // }
 
         return head;
 
