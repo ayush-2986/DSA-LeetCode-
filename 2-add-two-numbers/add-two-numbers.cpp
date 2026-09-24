@@ -40,7 +40,6 @@ public:
             }
             else last->next = node;
             last = node;
-            
             l1 = l1->next;
             l2 = l2->next;
         }
