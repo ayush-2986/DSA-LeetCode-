@@ -8,6 +8,7 @@ class Solution(object):
         for num in nums:
             count[num] += 1
         
+        major = len(nums)/2
         for n, v in count.items():
-            if v>len(nums)/2:
+            if v>major:
                 return n
